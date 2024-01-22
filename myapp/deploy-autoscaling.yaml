@@ -57,7 +57,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-app-service
-  namespace: myapp1
+  namespace: app1
 spec:
   selector:
     owner: vlad    # Selecting PODS with those Labels
@@ -71,7 +71,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-ingress
-  namespace: myapp1
+  namespace: app1
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
